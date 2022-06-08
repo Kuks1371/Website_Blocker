@@ -17,8 +17,7 @@ def url_adder(n):
 
 while True:                                             
     if dt(dt.now().year,dt.now().month,dt.now().day,8) < dt.now() < dt(dt.now().year,dt.now().month,dt.now().day,16):
-                                                        #starting_hour                                          stoping_hour
-        print("Working hours...")
+        print("Blocking hours...")
         with open(hosts_path,'r+') as file:
             content = file.read()
             for website in website_list:
@@ -34,5 +33,5 @@ while True:
                 if not any(website in line for website in website_list):
                     file.write(line)
             file.truncate()
-        print("Fun hours...")
+        print("Freedom hours...")
     time.sleep(5) #refresh rate for checking time
